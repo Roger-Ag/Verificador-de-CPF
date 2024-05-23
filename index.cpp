@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-// FunÁ„o principal
+// Fun√ß√£o principal
 int main() {
   int cpf, d1, d2, d3, d4, d5, d6, d7, d8, d9, soma1, x1, soma2, x2;
 
-  // Solicita ao usu·rio que digite o CPF
+  // Solicita ao usu√°rio que digite o CPF
   cout << "Digite seu cpf: ";
   cin >> cpf;
 
-  // Extrai os dÌgitos individuais do CPF
+  // Extrai os d√≠gitos individuais do CPF
   d1 = cpf / 100000000;
   d2 = cpf / 10000000 % 10;
   d3 = cpf / 1000000 % 10;
@@ -20,33 +20,33 @@ int main() {
   d8 = cpf / 10 % 10;
   d9 = cpf % 10;
 
-  // C·lculo do primeiro dÌgito verificador
+  // C√°lculo do primeiro d√≠gito verificador
   soma1 = d1 * 10 + d2 * 9 + d3 * 8 + d4 * 7 + d5 * 6 + d6 * 5 + d7 * 4 + d8 * 3 + d9
    * 2;
   soma1 = soma1 % 11;
   if (soma1 < 2) {
     x1 = 0;
-    cout << "\n o primeiro digito verificador È: " << x1;
+    cout << "\n o primeiro digito verificador √©: " << x1;
   } else {
     x1 = 11 - soma1;
-    cout << "\n o primeiro digito verificador È: " << x1;
+    cout << "\n o primeiro digito verificador √©: " << x1;
   }
 
-  // C·lculo do segundo dÌgito verificador
+  // C√°lculo do segundo d√≠gito verificador
   soma2 = d1 * 11 + d2 * 10 + d3 * 9 + d4 * 8 + d5 * 7 + d6 * 6 + d7 * 5 + d8 * 4 + d9
    * 3 + x1 * 2;
   soma2 = soma2 % 11;
 
   if (soma2 < 2) {
     x2 = 0;
-    cout << "\n o segundo digito verificador È: " << x2;
+    cout << "\n o segundo digito verificador √©: " << x2;
   } else {
     x2 = 11 - soma2;
-    cout << "\n o segundo digito verificador È: " << x2;
+    cout << "\n o segundo digito verificador √©: " << x2;
   }
 
-  // Exibe o CPF completo com os dÌgitos verificadores
-  cout << "\n o cpf completo È: " << d1 << d2 << d3 << "." << d4 << d5 << d6 << "."
+  // Exibe o CPF completo com os d√≠gitos verificadores
+  cout << "\n o cpf completo √©: " << d1 << d2 << d3 << "." << d4 << d5 << d6 << "."
   << d7 << d8 << d9 << "-" << x1 << x2;
 
   return 0;
